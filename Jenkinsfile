@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Copy Repo and clean') { 
             steps {
-                 sh "mvn clean -f my_app"
+                 sh "mvn clean -f my-app"
             }
         }
         stage('Test') { 
             steps {
-                sh "mvn test -f my_app"
+                sh "mvn test -f my-app"
             }
         }
         stage('Deploy') { 
             steps {
-                sh "mvn package -f my_app"
+                sh "mvn package -f my-app"
             }
         }
     }
